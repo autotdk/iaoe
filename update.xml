@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    update.xml - manifest tự cập nhật iAOE.
+
+    File này đặt ở gốc nhánh main của repo phát hành autotdk/iaoe.
+    Nguồn chính: https://raw.githubusercontent.com/autotdk/iaoe/main/update.xml
+    Với repo mặc định autotdk/iaoe, nguồn dự phòng là https://autotdk.github.io/iaoe/update.xml
+    (cần bật GitHub Pages). URL trong ứng dụng nằm ở include/UpdateConfig.h.
+    iAOE kiểm tra file này khi mở, trước giao diện và trước khi kết nối game.
+
+    Mỗi lần phát hành:
+    1. Sửa include/Version.h và build Release Win32.
+    2. Chạy scripts/prepare_release.py từ thư mục dự án; xem docs/UPDATING.md về tham số.
+    3. Upload iAOE.exe vào GitHub Release đúng tag v<version>.
+    4. Khi link tải đã dùng được, đưa update.xml mới lên nhánh main của repo phát hành.
+    5. Thử cập nhật từ một phiên bản thấp hơn.
+
+    Các thẻ version, url, mandatory chỉ xuất hiện một lần; note được lặp lại.
+    Chú thích không tham gia so phiên bản/tải file; có thể giữ nguyên khi phát hành.
+    Đây là XML phẳng cho updater: không dùng CDATA hay namespace.
+  -->
+<item>
+  <!--
+    Phiên bản phải trùng VERSIONINFO trong iAOE.exe (include/Version.h).
+    Chỉ cập nhật khi lớn hơn bản đang chạy; so theo số: 1.0.10 > 1.0.9.
+    Kiểm tra bằng Properties > Details của executable; không chỉ sửa số ở XML.
+  -->
+  <version>0.2.10</version>
+  <!--
+    Link HTTPS tới file iAOE.exe đã upload trong GitHub Releases.
+    Tag Release phải đúng v<version>, tên file đính kèm phải đúng iAOE.exe.
+    Upload executable trước, cập nhật manifest sau; không commit executable vào repo source.
+  -->
+  <url>https://github.com/autotdk/iaoe/releases/download/v0.2.10/iAOE.exe</url>
+  <!--
+    Mức cập nhật, chỉ dùng một trong ba giá trị:
+    false  : hỏi cập nhật; được từ chối/hủy tải; lỗi thì giữ bản hiện tại.
+    true   : bắt buộc; từ chối hoặc cập nhật thất bại thì đóng tool.
+    silent : tự tải, tự thay và mở lại; có tiến độ, không có nút Hủy; lỗi thì đóng tool.
+    Bắt buộc/tự động phù hợp khi bản cũ không còn dùng được sau khi game cập nhật.
+    Nếu không tải được manifest, tool vẫn mở bản hiện tại; cơ chế này không chặn dùng offline.
+    Giữ false cho bản phát hành thông thường; viết đúng giá trị, không dùng từ viết tắt.
+  -->
+  <mandatory>false</mandatory>
+  <!--
+    Nội dung thay đổi: mỗi ý một thẻ <note>, hiển thị trong hộp thoại cập nhật.
+    Có thể thêm nhiều thẻ; dùng tiếng Việt UTF-8. Script tự escape ký tự XML như &.
+    Nếu sửa tay: viết &amp; thay cho &, &lt; thay cho dấu nhỏ hơn.
+    Ví dụ: <note>Sửa lỗi nhấp nháy bảng ngọc</note>. Bản silent không hiện hộp thoại hỏi.
+  -->
+  <note>First commit</note>
+</item>
