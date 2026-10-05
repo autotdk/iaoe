@@ -27,11 +27,11 @@
   -->
   <version>0.2.10</version>
   <!--
-    Link HTTPS tới file iAOE.exe đã upload trong GitHub Releases.
-    Tag Release phải đúng v<version>, tên file đính kèm phải đúng iAOE.exe.
+    Link cố định tới Release tag đã chọn (- -url-tag, mặc định v1.0); không đổi theo phiên bản.
+    Mỗi lần phát hành: thay file iAOE.exe trong chính Release đó (giữ nguyên tag, đúng tên iAOE.exe).
     Upload executable trước, cập nhật manifest sau; không commit executable vào repo source.
   -->
-  <url>https://github.com/autotdk/iaoe/releases/download/v0.2.10/iAOE.exe</url>
+  <url>https://github.com/autotdk/iaoe/releases/download/v1.0/iAOE.exe</url>
   <!--
     Mức cập nhật, chỉ dùng một trong ba giá trị:
     false  : hỏi cập nhật; được từ chối/hủy tải; lỗi thì giữ bản hiện tại.
