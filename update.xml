@@ -25,7 +25,7 @@
     Chỉ cập nhật khi lớn hơn bản đang chạy; so theo số: 1.0.10 > 1.0.9.
     Kiểm tra bằng Properties > Details của executable; không chỉ sửa số ở XML.
   -->
-  <version>0.2.10</version>
+  <version>0.2.15</version>
   <!--
     Link cố định tới Release tag đã chọn (- -url-tag, mặc định v1.0); không đổi theo phiên bản.
     Mỗi lần phát hành: thay file iAOE.exe trong chính Release đó (giữ nguyên tag, đúng tên iAOE.exe).
@@ -48,5 +48,5 @@
     Nếu sửa tay: viết &amp; thay cho &, &lt; thay cho dấu nhỏ hơn.
     Ví dụ: <note>Sửa lỗi nhấp nháy bảng ngọc</note>. Bản silent không hiện hộp thoại hỏi.
   -->
-  <note>First commit</note>
+  <note>update</note>
 </item>
