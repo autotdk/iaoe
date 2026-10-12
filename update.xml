@@ -48,5 +48,5 @@
     Nếu sửa tay: viết &amp; thay cho &, &lt; thay cho dấu nhỏ hơn.
     Ví dụ: <note>Sửa lỗi nhấp nháy bảng ngọc</note>. Bản silent không hiện hộp thoại hỏi.
   -->
-  <note>update</note>
+  <note>Bản Release Win32 0.2.15 được bảo vệ bằng VMProtect.</note>
 </item>
